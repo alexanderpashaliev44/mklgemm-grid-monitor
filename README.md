@@ -1,4 +1,4 @@
-# `mklgemm-grid-monitor` — Multi-Core Intel® oneMKL `cblas_sgemm` & Memory Telemetry Grid
+# `mklgemm-grid-monitor` — Intel® oneMKL `cblas_sgemm` & Memory Telemetry Grid
 
 A Python + CBLAS multi-process compute engine and live desktop monitor ([`mklgemm-grid-monitor`](https://github.com/alexanderpashaliev44/mklgemm-grid-monitor)) built directly on **Intel® oneAPI Math Kernel Library (`oneMKL`) `cblas_sgemm`**. It automatically detects logical core count $N$, spawns $N$ OS-pinned worker processes (`SetProcessAffinityMask`), allocates **512 FP32 elements per logical core** ($N \times 512$ total elements), exercises controllable physical DRAM arenas, and plots real-time `cblas_sgemm` grid evolution alongside a per-core CPU & RAM utilization heatmap.
 
